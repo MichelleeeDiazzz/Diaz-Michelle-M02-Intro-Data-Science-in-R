@@ -1,0 +1,99 @@
+---
+title: "M02-Intro-Data-Science-in-R"
+author: "Michelle Diaz"
+date: "2026-09-10"
+format: 
+  html: 
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    code-link: true
+    embed-resources: true
+    theme: cosmo
+    code-tools: true
+editor: visual
+execute: 
+  freeze: auto
+---
+
+# The Reproducibility Crisis
+
+> Summarize the video presentation about the reproducibility crisis (Step 1).
+
+The video introduced the idea of reproducibility and why it matters in research. Reproducibility means obtaining the same computational results using the same input data, steps, methods, and code, in other words, same procedures, same data, same code. This is different from replicability, which means getting consistent results across separate studies that each collect their own new data to answer the same question, so same question, but new data and new code.
+
+The main point was the importance of getting organized and carefully documenting how you carried out your research, so you don't miss key steps and so others can follow and reuse your work. The video presented a Reproducible Project Pyramid, which builds from Data at the base, up through Version Control, Scripts/Literate Coding, Analysis & Visualization, and finally Reporting at the top. It also covered the TIER protocol, a structured way to organize your project folders and files from the very start, and stressed automating as much of the project as possible through scripts so the whole process can actually be reproduced.
+
+::: callout-note
+As Schwab and Claerbout put it, "the principal beneficiary is generally the author herself."
+:::
+
+# New Things I Learned About Reproducible Data Science and Literate Coding
+
+> Summarize the new things you learned in this module about reproducible data science and literate coding.
+
+One of the biggest new things I learned was the value of setting up a clear folder structure from the very beginning, keeping original data separate from analysis files, documentation, and command/script files. I also learned about automating a project through scripts and code so that every stage (data, version control, analysis and visualization, reporting, and archiving) can be reproduced reliably.
+
+I also better understood literate coding, which combines code with prose and visualization so the analysis explains itself. Instead of code sitting alone with no context, you use written narrative to structure and explain what you're doing, and your data codebooks become part of the project itself. The report is then rendered directly from the code, which keeps everything connected and reproducible.
+
+# Quarto Lectures I Found Impressive
+
+> Summarize the instructor's lectures about Quarto that you found impressive. Do you see yourself using Quarto every day for your job or studies?
+
+What impressed me most about Quarto is that it lets you weave together text and code to produce elegantly formatted output, including documents, web pages, blog posts, books, and more. It is essentially a command line interface that renders plain text or mixed formats into static PDF, Word, or HTML reports.
+
+One feature I found especially cool was Observable JavaScript, which lets you make outputs interactive. For example, a chart can include a slider (like a temperature bar) that the reader can adjust, and it even lets you make adjustments across multiple plots at once. I can absolutely see myself using Quarto regularly, whether for taking organized notes, preparing reports, or building presentations. Having everything (my writing, code, and results) in one clean, reproducible document is a much better system than juggling separate files.
+
+# The Tidyverse Ecosystem and What You Can Do With R
+
+> Summarize what you learned in this module about the Tidyverse ecosystem in R. What can you do with R?
+
+The Tidyverse is a collection of R packages that work together to handle the full data workflow, and I learned that you need to both install and load it before using it. Each package handles a stage of working with data: `readr` reads in the data, `dplyr` is used to tidy and transform it, and `ggplot2` plots it. The `dplyr` package provides a consistent set of verbs for data manipulation, including `mutate` (add new variables), `select` (pick variables), `filter` (pick rows based on values), `summarise` (reduce values to a summary), and `arrange` (reorder rows).
+
+I also learned more about tidy data, where every column is a variable, every row is an observation, and every cell is a single value. With R, you can do the whole pipeline: import data, clean and reshape it, transform it, analyze it, and visualize it, all within one environment. RStudio (and Positron) serve as the IDE, giving you one organized place to write code, manage files and projects, and view your plots and data.
+
+::: callout-tip
+## Tidy Data Rules
+
+1.  Every **column** is a variable.
+2.  Every **row** is an observation.
+3.  Every **cell** is a single value.
+:::
+
+# Reproducibility in My Field and How Quarto Helps
+
+> What do you think about the reproducible crisis in your field? How can Quarto help address the concerns you have about reproducibility in your line of work?
+
+In marketing analytics, I would say reproducibility definitely matters. Since we are analyzing data on past marketing efforts, we will often want to re-run an analysis and confirm that the claims we made before still hold up, and then build on that work to develop a new analysis. Being able to reproduce your work also proves its credibility later on, especially if your findings need to be defended to clients or bosses.
+
+Quarto is beneficial because it gives an in-depth understanding of what was run, why, and how. When it comes time to reproduce the work, whether for someone else or for your future self, you can look back and immediately understand why something was done the way it was. It is a great way to keep track of the code, scripts, and datasets you used, rather than just having plain code saved with no context.
+
+# Two Packages That Could Enhance My Career
+
+> Among the various packages introduced, choose two packages beyond the Tidyverse ecosystem, base R, and Quarto that could enhance your job/career. Tell me why you think so.
+
+::: panel-tabset
+## Plotly
+
+Plotly is a valuable package because it makes your graphs interactive. It allows you, or the people you are presenting to, to play around with the data directly, which makes the visuals more informative, engaging, and useful. For a marketing or fashion analytics role, interactive graphics are a powerful way to tell a data story and keep an audience engaged, rather than handing them a static chart.
+
+## Janitor
+
+Janitor is extremely useful because its whole purpose is to examine and clean "dirty" data. It helps create perfectly formatted data frames and clean tables, and it works well with data imported from sources like SPSS and Microsoft Excel. Since real-world marketing data is almost always messy, having a tool dedicated to cleaning and standardizing it would save time and reduce errors before any analysis even begins.
+:::
+
+# My Take on the R vs. Python Debate
+
+> Refer to the debate on R vs. Python. What is your take on this debate? Consider how Quarto enables people using R and Python in the same team to still collaborate.
+
+Both R and Python have real strengths. Python is often praised as a great beginner language and is used for many things beyond data science, which makes it easier to integrate into tools like data engineering pipelines or web interfaces. It is also strong for deep learning because of its many libraries. R, on the other hand, is a bit easier to pick up as a beginner since it is a statistical programming language, and cleaning and preparing data in R is easier thanks to the tidyverse. R is also well suited for exploratory data analysis.
+
+My take is that the choice really depends on your end goal and how you plan to apply it. Rather than seeing it as one being better than the other, I think what matters is what you need from the tool. This is where Quarto stands out: it lets people using R and Python collaborate in the same document, so a team is not forced to pick one language or work in separate tools. That shared, flexible environment is a strength for any team that mixes both.
+
+# Appendix
+
+> Links to the published work for this assignment.
+
+**GitHub Repository:** [ADD YOUR REPO URL HERE](ADD-YOUR-REPO-URL-HERE)
+
+**GitHub Pages (Published Report):** [ADD YOUR PAGES URL HERE](ADD-YOUR-PAGES-URL-HERE)
